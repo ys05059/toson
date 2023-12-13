@@ -1,4 +1,4 @@
-package com.android.todayson.signup
+package com.android.todayson.ui.signup
 
 import androidx.lifecycle.ViewModel
 import com.android.todayson.VoiceToTextParser

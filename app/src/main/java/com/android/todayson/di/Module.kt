@@ -1,7 +1,7 @@
-package com.android.todayson
+package com.android.todayson.di
 
-import android.app.Application
 import android.content.Context
+import com.android.todayson.VoiceToTextParser
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +16,7 @@ object Module {
     @Singleton
     fun provideVoiceToTextParser(
         @ApplicationContext context : Context
-    ): VoiceToTextParser{
+    ): VoiceToTextParser {
         return VoiceToTextParser(context)
     }
 }

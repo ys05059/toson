@@ -1,4 +1,4 @@
-package com.android.todayson.signup
+package com.android.todayson.ui.signup
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.android.todayson.R
-import com.android.todayson.component.CircleButton
-import com.android.todayson.component.SignUpScaffold
+import com.android.todayson.ui.component.CircleButton
+import com.android.todayson.ui.component.SignUpScaffold
 
 @Composable
 fun SignUpSexScreen(

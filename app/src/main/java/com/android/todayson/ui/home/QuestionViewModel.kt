@@ -1,4 +1,4 @@
-package com.android.todayson.home
+package com.android.todayson.ui.home
 
 import androidx.lifecycle.ViewModel
 import com.android.todayson.VoiceToTextParser

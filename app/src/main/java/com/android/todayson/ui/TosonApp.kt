@@ -1,4 +1,4 @@
-package com.android.todayson
+package com.android.todayson.ui
 
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -13,19 +13,19 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.android.todayson.NavDestination.CALL_ROUTE
-import com.android.todayson.NavDestination.EMOTION_ROUTE
-import com.android.todayson.NavDestination.HOME_ROUTE
-import com.android.todayson.NavDestination.INTRO_ROUTE
-import com.android.todayson.NavDestination.QUESTION_ROUTE
-import com.android.todayson.NavDestination.SETTING_ROUTE
-import com.android.todayson.NavDestination.SIGNUP_ROUTE
-import com.android.todayson.home.CallScreen
-import com.android.todayson.home.EmotionScreen
-import com.android.todayson.home.HomeScreen
-import com.android.todayson.home.QuestionScreen
-import com.android.todayson.home.SettingScreen
-import com.android.todayson.signup.SignUpRoute
+import com.android.todayson.ui.NavDestination.CALL_ROUTE
+import com.android.todayson.ui.NavDestination.EMOTION_ROUTE
+import com.android.todayson.ui.NavDestination.HOME_ROUTE
+import com.android.todayson.ui.NavDestination.INTRO_ROUTE
+import com.android.todayson.ui.NavDestination.QUESTION_ROUTE
+import com.android.todayson.ui.NavDestination.SETTING_ROUTE
+import com.android.todayson.ui.NavDestination.SIGNUP_ROUTE
+import com.android.todayson.ui.home.CallScreen
+import com.android.todayson.ui.home.EmotionScreen
+import com.android.todayson.ui.home.HomeScreen
+import com.android.todayson.ui.home.QuestionScreen
+import com.android.todayson.ui.home.SettingScreen
+import com.android.todayson.ui.signup.SignUpRoute
 
 @Composable
 fun TosonApp(

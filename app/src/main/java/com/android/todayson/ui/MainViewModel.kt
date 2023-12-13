@@ -1,6 +1,7 @@
-package com.android.todayson
+package com.android.todayson.ui
 
 import androidx.lifecycle.ViewModel
+import com.android.todayson.VoiceToTextParser
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

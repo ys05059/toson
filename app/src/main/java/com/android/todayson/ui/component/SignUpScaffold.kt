@@ -1,4 +1,4 @@
-package com.android.todayson.component
+package com.android.todayson.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.android.todayson.R
-import com.android.todayson.signup.Circle
+import com.android.todayson.ui.signup.Circle
 
 
 @Composable

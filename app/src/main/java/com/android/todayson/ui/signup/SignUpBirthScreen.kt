@@ -1,4 +1,4 @@
-package com.android.todayson.signup
+package com.android.todayson.ui.signup
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,8 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.android.todayson.R
-import com.android.todayson.component.RoundedButton
-import com.android.todayson.component.SignUpScaffold
+import com.android.todayson.ui.component.RoundedButton
+import com.android.todayson.ui.component.SignUpScaffold
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneOffset

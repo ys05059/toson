@@ -1,4 +1,4 @@
-package com.android.todayson.home
+package com.android.todayson.ui.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.android.todayson.R
-import com.android.todayson.component.IconCard
+import com.android.todayson.ui.component.IconCard
 
 @Composable
 fun HomeScreen(

@@ -1,4 +1,4 @@
-package com.android.todayson.component
+package com.android.todayson.ui.component
 
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes

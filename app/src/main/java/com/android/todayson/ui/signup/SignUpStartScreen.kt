@@ -1,4 +1,4 @@
-package com.android.todayson.signup
+package com.android.todayson.ui.signup
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.android.todayson.R
-import com.android.todayson.component.SignUpScaffold
+import com.android.todayson.ui.component.SignUpScaffold
 
 @Composable
 fun SignUpStartScreen(

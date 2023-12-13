@@ -1,4 +1,4 @@
-package com.android.todayson.home
+package com.android.todayson.ui.home
 
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.android.todayson.R
-import com.android.todayson.signup.Circle
+import com.android.todayson.ui.signup.Circle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
