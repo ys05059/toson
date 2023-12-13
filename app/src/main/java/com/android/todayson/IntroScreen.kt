@@ -72,6 +72,7 @@ fun IntroScreen(
         ){
             Spacer(modifier = Modifier.width(30.dp))
             IconCard(
+                modifier = Modifier.size(180.dp),
                 iconId = R.drawable.phone_call,
                 colorId = R.color.phone_call
             )
@@ -82,6 +83,7 @@ fun IntroScreen(
                     .offset(40.dp),
             ){
                 IconCard(
+                    modifier = Modifier.size(180.dp),
                     iconId = R.drawable.clipboard,
                     colorId = R.color.clip_board
                 )

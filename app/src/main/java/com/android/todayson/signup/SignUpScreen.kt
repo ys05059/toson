@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -34,6 +35,10 @@ import androidx.navigation.compose.rememberNavController
 import com.android.todayson.NavDestination.SIGNUP_ROUTE
 import com.android.todayson.R
 import com.android.todayson.component.RoundedButton
+import com.android.todayson.component.SignUpScaffold
+import com.android.todayson.signup.SignUpNavDestination.ALARM_ROUTE
+import com.android.todayson.signup.SignUpNavDestination.BIRTH_ROUTE
+import com.android.todayson.signup.SignUpNavDestination.COMPLETE_ROUTE
 import com.android.todayson.signup.SignUpNavDestination.NAME_ROUTE
 import com.android.todayson.signup.SignUpNavDestination.SEX_ROUTE
 import com.android.todayson.signup.SignUpNavDestination.START_ROUTE
@@ -49,7 +54,8 @@ object SignUpNavDestination {
 
 @Composable
 fun SignUpRoute(
-    signUpNavController: NavHostController =  rememberNavController()
+    signUpNavController: NavHostController =  rememberNavController(),
+    navigateToHome : () -> Unit = {}
 ) {
     NavHost(
         navController = signUpNavController,
@@ -65,95 +71,39 @@ fun SignUpRoute(
         }
 
         composable(route = NAME_ROUTE){
-            SignUpNameScreen {
+            SignUpNameScreen{
                 signUpNavController.navigate(SEX_ROUTE)
             }
         }
 
         composable(route = SEX_ROUTE){
-            SignUpNameScreen {
-                signUpNavController.navigate(START_ROUTE)
+            SignUpSexScreen {
+                signUpNavController.navigate(BIRTH_ROUTE)
             }
         }
 
+        composable(route = BIRTH_ROUTE){
+            SignUpBirthScreen{
+                signUpNavController.navigate(ALARM_ROUTE)
+            }
+        }
+
+        composable(route = ALARM_ROUTE){
+            SignUpAlarmScreen{
+                signUpNavController.navigate(COMPLETE_ROUTE)
+            }
+        }
+
+        composable(route = COMPLETE_ROUTE){
+            SignUpCompleteScreen (
+                navigateToNext = navigateToHome
+            )
+        }
     }
 
 }
 
-@Composable
-fun SignUpScaffold(
-    buttonText : String = "다음 단계",
-    onButtonClicked : () -> Unit = {},
-    headContent : @Composable () -> Unit,
-    mainContent : @Composable ColumnScope.() -> Unit,
-) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = colorResource(id = R.color.signup_background))
-    ){
-        Circle(
-            modifier  = Modifier.offset(x = (-75).dp, y = (-140).dp),
-            size = 400.dp,
-            color = colorResource(id = R.color.signup_circle)
-        )
 
-        Column(modifier = Modifier.fillMaxSize()){
-            Row(modifier = Modifier
-                .fillMaxWidth()
-                .weight(.3f)
-
-            ){
-                Surface(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 24.dp)
-                        .padding(top = 80.dp, bottom = 20.dp)
-                    ,
-                    color = Color.Transparent
-                ) {
-                    headContent()
-                }
-            }
-            Surface(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(.7f)
-                ,
-                shape = RoundedCornerShape(topStart = 40.dp, topEnd = 40.dp )
-            ) {
-                Surface(
-                    modifier = Modifier.padding(horizontal = 24.dp)
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxWidth().padding(vertical = 30.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.SpaceBetween
-                        ) {
-                        mainContent()
-                        RoundedButton(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(80.dp)
-                            ,
-                            basicBackgroundColor = colorResource(id = R.color.signup_bottom_button),
-                            pressedBackgroundColor = colorResource(id = R.color.signup_bottom_button),
-                            roundedCornerSize = 40.dp,
-                            onClick = onButtonClicked
-                        ) {
-                            Text(
-                                text = buttonText,
-                                fontSize = 38.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color.White
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 @Composable
 fun Circle(
     modifier : Modifier = Modifier,

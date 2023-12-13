@@ -14,10 +14,22 @@
     <color name="signup_circle">#FFF0EE</color>
     <color name="signup_sound_text">#EE3D53</color>
     <color name="signup_bottom_button">#2F55B5</color>
-    <color name="signup_say_button">#E6A656</color>
+    <color name="yellow">#E6A656</color>
     <color name="signup_women_button">#C1284C</color>
     <color name="signup_man_button">#01555F</color>
     <color name="signup_round_text_background">#EFEFEF</color>
+    <color name="signup_complete_circle1">#FFF4F3</color>
+    <color name="signup_complete_circle2">#FFFCFC</color>
+
+    <color name="background_gradient_start">#8F1742</color>
+    <color name="background_gradient_end">#DE4B6E</color>
+    <color name="arrow_back">#7D7D7D</color>
+    <color name="question_circle">#EEEEEE</color>
+    <color name="progress_background">#E3E3E3</color>
+    <color name="progress_blue">#0F87CB</color>
+    <color name="call_background">#DA869C</color>
+
+
 
 
 
